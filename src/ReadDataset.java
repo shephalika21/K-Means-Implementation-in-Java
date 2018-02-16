@@ -1,6 +1,6 @@
 /*
  * Programmed by Shephalika Shekhar
- * Class to extract features from Iris.txt file
+ * Class to extract features from file
  */
 import java.io.BufferedReader;
 import java.io.File;
@@ -41,14 +41,14 @@ public class ReadDataset {
 			{
 			
 			 String[] split = line.split(",");
-             double[] feature = new double[split.length - 1];
-             numberOfFeatures = split.length-1;
-            for (int i = 0; i < split.length - 1; i++)
-                feature[i] = Double.parseDouble(split[i]);
-            features.add(feature);
-             String labels = split[feature.length];
-            label.add(labels);
-		}
+            		 double[] feature = new double[split.length - 1];
+             		numberOfFeatures = split.length-1;
+            		for (int i = 0; i < split.length - 1; i++)
+               			 feature[i] = Double.parseDouble(split[i]);
+            		features.add(feature);
+             		String labels = split[feature.length];
+            		label.add(labels);
+			}
 	} catch (FileNotFoundException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
